@@ -1,0 +1,24 @@
+form {
+    .form-group {
+        margin-bottom: 30px;
+    }
+    .form-control {
+        @include border-radius(4px);
+        background: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-800;
+        padding: 17px 15px;
+        font-size: 16px;
+        line-height: 20px;
+        height: 100%;
+        transition: 0.4s all ease-in-out;
+        &:focus {
+            border: 1px solid $blue;
+        }
+        @include placeholder {
+            color: $gray-400;
+            font-weight: $light;
+        }
+    }
+}
+

@@ -1,0 +1,42 @@
+.navbar {
+    background: none;
+    padding: 0;
+    .navbar-brand {
+        margin: 0;
+        padding: 30px 0;
+        line-height: 0;
+    }
+    .navbar-nav {
+        align-items: center;
+        .nav-item {
+            .nav-link {
+                color: $white;
+                padding: 0;
+                margin-right: 30px;
+                padding-bottom: rem-calc(5);
+                position: relative;
+                &:after {
+                    content: '';
+                    background: $blue;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: 0.4s all ease-in-out;
+                }
+                i {
+                    margin-right: 10px;
+                }
+            }
+            &.active,
+            &:hover {
+                .nav-link {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

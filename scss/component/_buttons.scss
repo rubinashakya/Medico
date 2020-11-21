@@ -1,0 +1,40 @@
+.btn {
+    @include border-radius(23px);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    padding: 13px 30px;
+    position: relative;
+    overflow-x: hidden;
+    border: none;
+    &:hover {
+        color: $white;
+        box-shadow: 0 2px 8px 0 rgba($white, 0.3);
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 0;
+        height: 100%;
+        transition: 0.3s all ease-in-out;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &--primary {
+        background: $blue;
+        &:hover {
+            &:before {
+                background: $black;
+                left: 0;
+                width: 100%;
+                color: $white;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+}

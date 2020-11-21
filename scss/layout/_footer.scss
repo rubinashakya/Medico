@@ -1,0 +1,41 @@
+footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 50px;
+}
+
+.footer-links {
+    li {
+        display: inline-block;
+        a {
+            color: $white;
+            font-size: 16px;
+            line-height: 20px;
+            margin-right: 20px;
+            position: relative;
+            padding-bottom: 5px;
+            &:after {
+                content: '';
+                background: $blue;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                transition: 0.4s all ease-in-out;
+            }
+            &:hover,
+            &.active {
+                text-decoration: none;
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    span {
+        color: $white;
+    }
+}

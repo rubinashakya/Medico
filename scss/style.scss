@@ -1,0 +1,29 @@
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Helper 
+@import "helper/reset";
+@import "helper/variables";
+@import "helper/mixins";
+
+//Global
+@import "global/general";
+@import "global/typography";
+
+//Component
+@import "component/buttons";
+@import "component/form";
+
+//Vendor
+@import "vendor/select2";
+
+//Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navbar";
+
+//Blocks
+@import "blocks/background-image";
+@import "blocks/search-form-section";
