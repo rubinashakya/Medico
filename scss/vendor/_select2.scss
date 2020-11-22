@@ -1,13 +1,39 @@
 .select2-container {
-    min-height: auto;
     .select2-selection--multiple {
         background: $gray-100;
         border: 1px solid $gray-200;
         height: auto;
-        padding: 17px 15px;
+        padding: 5px 2.5px;
         font-size: 16px;
-        line-height: 20px;
-        height: 100%;
+        line-height: 0;
+        min-height: 55px;
         transition: 0.4s all ease-in-out;
+        .select2-selection__rendered {
+            padding: 0;
+        }
+        .select2-selection__choice {
+            @include border-radius(4px);
+            background: $green;
+            color: $white;
+            margin: 0 2.5px 0;
+            position: relative;
+            padding: 20px 30px 20px 10px;
+        }
+        .select2-selection__choice__remove {
+            color: $dark-green;
+            font-size: 20px;
+            margin-left: 10px;
+            float: right;
+            margin: 0;
+            position: absolute;
+            right: 8px;
+        }
+    }
+
+    .select2-search--inline {
+        .select2-search__field {
+            margin: 0;
+            height: 42px;
+        }
     }
 }

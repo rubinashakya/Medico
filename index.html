@@ -20,6 +20,8 @@
           <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Medico"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav ml-auto">
@@ -50,23 +52,26 @@
                 <div class="form-group">
                   <label class="h3">What conditions is {the patient} facing?</label>
                   <span>You can select multiple conditions</span>
-                  <select class="form-control multiple-select" name="states[]" multiple="multiple">
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
+                  <select class="form-control multiple-select" name="conditions[]" multiple="multiple">
+                    <option value="Fever">Fever</option>
+                    <option value="Neck Pain">Neck Pain</option>
+                    <option value="Headache">Headache</option>
+                    <option value="Cough">Cough</option>
+                    <option value="Common Cold">Common Cold</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="h3">Where is {the patient} located?</label>
                   <input type="text" name="Location" class="form-control" placeholder="i.e. Sydney" />
                 </div>
-                <button type="button" class="btn submit-btn">Lets start finding a doctor nownpm</button>
+                <button type="button" class="btn submit-btn">Lets start finding a doctor now <i class="fas fa-chevron-right"></i></button>
               </form>
             </div>
         </div>
       </section>
       <footer>
         <div class="container-fluid">
-          <div class="d-lg-flex footer-links .flex-lg-wrap">
+          <div class="d-md-flex footer-links .flex-lg-wrap">
             <ul class="list-style-none p-0 m-0">
               <li>
                 <a href="#">Help</a>
@@ -84,7 +89,6 @@
       </footer>
     </main>
 
-    <script src="https://polyfill.io/v3/polyfill.js?features=es6%2Ces7"></script>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -14,7 +14,13 @@ main {
 }
 
 .container-fluid {
-    padding: rem-calc(0 60);
+    padding: rem-calc(0 20);
+    @include breakpoint(md){
+        padding: rem-calc(0 40);
+    }
+    @include breakpoint(lg){
+        padding: rem-calc(0 60);
+    }
 }
 
 .list-style-none {
