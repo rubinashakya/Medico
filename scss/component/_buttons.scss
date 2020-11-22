@@ -1,5 +1,4 @@
 .btn {
-    @include border-radius(23px);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 20px;
@@ -8,9 +7,13 @@
     position: relative;
     overflow-x: hidden;
     border: none;
+    min-width: 190px;
     &:hover {
         color: $white;
         box-shadow: 0 2px 8px 0 rgba($white, 0.3);
+        span {
+            color: $white;
+        }
     }
     &:before {
         content: '';
@@ -25,16 +28,25 @@
         position: relative;
         z-index: 2;
     }
+    &--rounded {
+        @include border-radius(23px);
+    }
     &--primary {
         background: $blue;
         &:hover {
             &:before {
-                background: $black;
+                background: $gray-900;
                 left: 0;
                 width: 100%;
                 color: $white;
                 transition: 0.3s all ease-in-out;
             }
         }
+    }
+    &--lg {
+        min-width: 230px;
+    }
+    &--sm {
+        min-width: 116px;
     }
 }

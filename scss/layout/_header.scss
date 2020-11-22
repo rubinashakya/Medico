@@ -1,0 +1,20 @@
+header {
+    &.header-white {
+        box-shadow: 0 0 7px 0 rgba($black, 0.17);
+        .nav-link,
+        span {
+            color: $gray;
+            @include breakpointMax(lg){
+                font-size: 25px;
+                line-height: 35px;
+                margin: 15px 0;
+                color: $white;
+            }
+        }
+        .navbar-toggler {
+            .navbar-toggler-icon {
+                background: $blue;
+            }
+        } 
+    }
+}

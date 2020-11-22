@@ -1,9 +1,18 @@
 .search-form-wrap {
-    width: 50%;
+    width: 100%;
     margin-left: auto;
     position: relative;
-    margin-top: 150px;
-    margin-bottom: 40px;
+    margin: 40px auto;
+    @include breakpoint(md){
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: initial;
+        width: 65%;
+    }
+    @include breakpoint(lg){
+        width: 50%;
+        margin-top: 150px;
+    }
     h2 {
         color: $white;
         display: block;

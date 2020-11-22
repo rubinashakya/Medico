@@ -1,21 +1,41 @@
 footer {
     position: absolute;
     left: 0;
-    width: 100%;
     bottom: 0;
-    padding-bottom: 50px;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 1;
+    @include breakpoint(md){
+        padding-bottom: 50px;
+    }
+    &.footer-white {
+        a, span, p {
+            color: $gray-500 !important;
+        }
+    }
 }
 
 .footer-links {
+    text-align: center;
+    ul {
+        margin-bottom: 10px !important;
+        @include breakpoint(md) {
+            margin-bottom: 0 !important;
+        }
+    }
     li {
         display: inline-block;
         a {
             color: $white;
             font-size: 16px;
-            line-height: 20px;
-            margin-right: 20px;
+            line-height: 30px;
+            margin: 0 10px;
             position: relative;
             padding-bottom: 5px;
+            @include breakpoint(md){
+                margin-right: 20px;
+                line-height: 20px;
+            }
             &:after {
                 content: '';
                 background: $blue;
