@@ -15,6 +15,9 @@ form {
             }
         }
     }
+    label {
+        margin-bottom: 10px;
+    }
     .form-control {
         @include border-radius(4px);
         background: $gray-100;

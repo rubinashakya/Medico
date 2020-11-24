@@ -44,7 +44,10 @@
         }
     }
     &--lg {
-        min-width: 230px;
+        min-width: 100%;
+        @include breakpoint(sm){
+            min-width: 230px;
+        }
     }
     &--sm {
         min-width: 116px;

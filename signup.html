@@ -14,48 +14,109 @@
 
   <body>
     <section class="sign-up-block">
-        <div class="row m-0">
-            <div class="col-sm-12 col-md-6 p-0">
-                <header class="header-white">
-                    <div class="container-fluid">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Medico"/></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarText">
-                                <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <span class="ml-auto">Don’t have an account yet? <a href="#" class="link font-weight-bold">Join Us</a></span>
-                                </li>
-                                </ul>
-                            </div>
-                        </nav>
+        <header class="header-white">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Medico"/></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <span class="ml-auto">Already have an account? <a href="#" class="link font-weight-bold">Log In</a></span>
+                        </li>
+                        </ul>
                     </div>
-                </header>
+                </nav>
+            </div>
+        </header>
+        <div class="row m-0">
+            <div class="col-sm-12 col-md-6 p-0 right-block">
+                <div class="linear-background d-flex justify-content-center align-items-center">
+                    <div class="simple-carousel" id="signup-carousel">
+                        <div class="simple-carousel__item">
+                            <div class="simple-carousel__img">
+                                <img src="img/Dashboard.png" alt="Dashboard"/>
+                            </div>
+                            <div class="simple-carousel__content text-center">
+                                <h3>All things Important</h3>
+                                <p>Get access to all things important from your new Dashboard, it’s easier to manage your appointments and profile.</p>
+                            </div>
+                        </div>
+                        <div class="simple-carousel__item">
+                            <div class="simple-carousel__img">
+                                <img src="img/Dashboard.png" alt="Dashboard"/>
+                            </div>
+                            <div class="simple-carousel__content">
+                                <h3>All things Important</h3>
+                                <p>Get access to all things important from your new Dashboard, it’s easier to manage your appointments and profile.</p>
+                            </div>
+                        </div>
+                        <div class="simple-carousel__item">
+                            <div class="simple-carousel__img">
+                                <img src="img/Dashboard.png" alt="Dashboard"/>
+                            </div>
+                            <div class="simple-carousel__content">
+                                <h3>All things Important</h3>
+                                <p>Get access to all things important from your new Dashboard, it’s easier to manage your appointments and profile.</p>
+                            </div>
+                        </div>
+                        <div class="simple-carousel__item">
+                            <div class="simple-carousel__img">
+                                <img src="img/Dashboard.png" alt="Dashboard"/>
+                            </div>
+                            <div class="simple-carousel__content">
+                                <h3>All things Important</h3>
+                                <p>Get access to all things important from your new Dashboard, it’s easier to manage your appointments and profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 p-0 left-block">
                 <main>
                     <div class="container-fluid">
                         <div class="d-flex align-items-center h-100">
-                            <div class="login-form-wrap">
-                                <div class="text-center">
-                                    <h2 class="h1">Welcome !</h2>
-                                    <p>Log In to your dashboard using your credentials</p>
+                            <div class="login-form-wrap signup-form-wrap">
+                                <div class="text-left">
+                                    <h2 class="h1">Sign Up</h2>
+                                    <p>Join in Australia’s most promising network of patients</p>
                                 </div>
                                 <form>
-                                    <div class="form-group input-icon-group">
-                                        <i class="fas fa-envelope"></i>
-                                        <input type="email" name="email" class="form-control" placeholder="Email Address" />
+                                    <div class="form-group">
+                                        <label>Your Name</label>
+                                        <input type="text" name="Fullname" class="form-control" placeholder="Eg: Martin Tyler" />
                                     </div>
-                                    <div class="form-group input-icon-group">
-                                        <i class="fas fa-lock"></i>
-                                        <input type="password" name="password" class="form-control" placeholder="Password" />
+                                    <div class="form-group">
+                                        <label>Your Email Address</label>
+                                        <input type="email" name="email-address" class="form-control" placeholder="Eg: martintyler@domain.com" />
                                     </div>
-                                    <div class="button-group d-sm-flex align-items-center justify-content-between">
-                                        <a href="#" class="pink text-underline">Forget Password?</a>
-                                        <button type="button" class="btn btn--lg btn--primary">Log In</button>
+                                    <div class="form-group">
+                                        <label>Your Password</label>
+                                        <input type="password" name="password" class="form-control password-strength-input" placeholder="at least 8 characters" />
+                                        <ul class="password-strength mt-2">
+                                            <li class="password-strength__bar password-strength__bar--1"></li>
+                                            <li class="password-strength__bar password-strength__bar--2"></li>
+                                            <li class="password-strength__bar password-strength__bar--3"></li>
+                                            <li class="password-strength__bar password-strength__bar--4"></li>
+                                            <li class="password-strength__bar password-strength__bar--5"></li>
+                                        </ul>
                                     </div>
+                                    <div class="form-group">
+                                        <p>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                                By creating an account, you agree to the <a href="#" class="link text-underline font-weight-bold">terms of use</a> and our
+                                                <a href="#" class="link text-underline font-weight-bold">privacy policy</a>
+                                            </label> 
+                                        <p>
+                                    </div>
+                                    <button type="button" class="btn btn--lg btn--primary"><span>Sign Up</span></button>
+                                    <p>Already have an account? <a href="#" class="link text-underline font-weight-bold">Log In</a></p>
                                 </form>
                             </div>
                         </div>
@@ -74,11 +135,6 @@
                     </footer>
                 </main>
             </div>
-            <div class="col-sm-12 col-md-6 p-0">
-                <div class="linear-background">
-
-                </div>
-            </div>
         </div>
     </section>
     
@@ -86,6 +142,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
     
   </body>

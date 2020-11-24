@@ -7,7 +7,7 @@
     position: relative;
     &:before {
         content: '';
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0%, rgba(60, 59, 59, 0.96) 61.2%, rgba(43, 41, 41, 100%) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.62) 0%, rgba(60, 59, 59, 0.99) 61.2%, rgba(43, 41, 41, 100%) 100%);
         background-blend-mode: multiply;
         position: absolute;
         top: 0;

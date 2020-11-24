@@ -1,0 +1,44 @@
+.sign-up-block {
+    .row {
+        position: relative;
+        .right-block {
+            .linear-background {
+                padding: 50px 0;
+            }
+            @include breakpoint(md){
+                position: absolute;
+                top: -89px;
+                right: 0;
+                height: calc(100% + 89px);
+                .linear-background {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+.signup-form-wrap {
+    width: 100%;
+    margin-left: initial;
+    @include breakpoint(lg){
+        width: 85%;
+    }
+    .text-left {
+        margin-bottom: 40px;
+        .h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: $light;
+            opacity: 0.6;
+        }
+    }
+    .btn {
+        margin-bottom: 20px;
+        @include breakpointMax(sm){
+            min-width: 100%;
+        }
+    }
+}

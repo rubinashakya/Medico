@@ -2,6 +2,7 @@
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/slick-carousel/slick/slick.scss';
 
 // Helper 
 @import "helper/reset";
@@ -16,9 +17,11 @@
 //Component
 @import "component/buttons";
 @import "component/form";
-
+@import "component/checkbox";
+@import "component/password-strength";
 //Vendor
 @import "vendor/select2";
+@import "vendor/slick-slider";
 
 //Layout
 @import "layout/header";
@@ -29,3 +32,4 @@
 @import "blocks/background-image";
 @import "blocks/search-form-section";
 @import "blocks/login-block";
+@import "blocks/signup-block";

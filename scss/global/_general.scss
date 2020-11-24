@@ -53,3 +53,21 @@ main {
 .text-underline {
     text-decoration: underline;
 }
+
+.linear-background {
+    background: linear-gradient(135deg, #3056F5 0%, #8048FF 100%);
+    height: 100%;
+    position: relative;
+    &:before {
+        content: '';
+        background-image: url('../img/shadow.png');
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}

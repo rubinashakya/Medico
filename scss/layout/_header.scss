@@ -4,6 +4,7 @@ header {
         .nav-link,
         span {
             color: $gray;
+            text-align: center;
             @include breakpointMax(lg){
                 font-size: 25px;
                 line-height: 35px;
