@@ -5,9 +5,6 @@ footer {
     width: 100%;
     padding: 30px 0;
     z-index: 1;
-    @include breakpoint(md){
-        padding-bottom: 50px;
-    }
     &.footer-white {
         a, span, p {
             color: $gray-500 !important;

@@ -1,0 +1,11 @@
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    min-height: 100%;
+    padding: 0;
+}
+
+#content {
+    width: calc(100% - 240px);
+}

@@ -1,0 +1,96 @@
+.steps-list {
+    margin: 70px 0 40px;
+    @include breakpoint(md){
+        margin: 75px 0;
+    }
+    &__step {
+        position: relative;
+        &:after {
+            content: '';
+            background: $gray-300;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: calc(100vw / 3);
+            height: 2px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+            .steps-list__link {
+                padding-right: 0;
+            }
+        }
+    }
+    &__completed {
+        &:after {
+            background: $green;
+        }
+        .steps-list__link {
+            color: $green;
+        }
+        .steps-list__circle {
+            background: $green;
+            border: 2px solid $green;
+            i {
+                font-size: 0;
+                &:before {
+                    color: $white;
+                    display: block;
+                    font-size: 14px;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+    &__active {
+        .steps-list__link {
+            color: $green;
+        }
+        .steps-list__circle {
+            border: 2px solid $green;
+            i {
+                color: $green;
+            }
+        }
+    }
+    &__link {
+        background: $white;
+        color: #b0b0b0;
+        position: relative;
+        z-index: 1;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        @include breakpointMax(sm){
+            padding: 0 5px;
+            font-size: 14px;
+        }
+    }
+    &__circle {
+        @include border-radius(50%);
+        background: transparent;
+        border: 2px solid $gray-300;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        line-height: 27px;
+        font-size: 14px;
+        color: #b0b0b0;
+        text-align: center;
+        margin-right: 5px;
+        i {
+            &:before {
+                display: none;
+            }
+        }
+        @include breakpointMax(sm){
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.datepicker-wrapper {
+    background: $gray-100;
+    position: relative;
+    .form-control {
+        background: transparent;
+        position: relative;
+        z-index: 2;
+        &:invalid::-webkit-datetime-edit {
+            color: $gray-400;
+            text-transform: uppercase;
+        }
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        &::-webkit-datetime-edit-day-field {
+            // color: $gray-400;
+            text-transform: uppercase;
+        }
+        &::-webkit-datetime-edit-month-field {
+            // color: $gray-400;
+            text-transform: uppercase;
+        }
+        &::-webkit-datetime-edit-year-field {
+            // color: $gray-400;
+            text-transform: uppercase;
+        }
+    }
+    &:after {
+        content: '\f073';
+        color: $gray-400;
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        z-index: 1;
+        cursor: pointer;
+    }
+}

@@ -1,8 +1,9 @@
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/slick-carousel/slick/slick.scss';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
 
 // Helper 
 @import "helper/reset";
@@ -18,7 +19,11 @@
 @import "component/buttons";
 @import "component/form";
 @import "component/checkbox";
+@import "component/table";
 @import "component/password-strength";
+@import "component/rating";
+@import "component/custom-scrollbar";
+@import "component/datepicker";
 //Vendor
 @import "vendor/select2";
 @import "vendor/slick-slider";
@@ -30,6 +35,16 @@
 
 //Blocks
 @import "blocks/background-image";
+@import "blocks/title-block";
+@import "blocks/text-center-block";
 @import "blocks/search-form-section";
 @import "blocks/login-block";
 @import "blocks/signup-block";
+@import "blocks/steps";
+@import "blocks/search-list-block";
+@import "blocks/select-date-block";
+@import "blocks/confirmation-block";
+
+//Admin styles
+@import "admin/dashboard-content.scss";
+@import "admin/sidebar.scss";

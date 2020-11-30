@@ -17,7 +17,7 @@
       <header>
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Medico"/></a>
+          <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Medico"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               <span class="navbar-toggler-icon"></span>
@@ -25,14 +25,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-user-md"></i> Find a Practitioner</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sign In</a>
+                  <a class="nav-link" href="login.html">Sign In</a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn--primary btn--rounded" href="#"><span>Create an account</span></a>
+                  <a class="btn btn--primary btn--rounded" href="signup.html">Create an account</a>
                 </li>
               </ul>
             </div>
@@ -47,12 +47,12 @@
               <form>
                 <div class="form-group">
                   <label class="h3">What is the patient’s name?</label>
-                  <input type="text" name="Patient Name" class="form-control" placeholder="i.e. Martin Tyler" />
+                  <input type="text" name="Patient Name" class="form-control form-control-lg" placeholder="i.e. Martin Tyler" />
                 </div>
                 <div class="form-group">
                   <label class="h3">What conditions is {the patient} facing?</label>
                   <span>You can select multiple conditions</span>
-                  <select class="form-control multiple-select" name="conditions[]" multiple="multiple">
+                  <select class="form-control form-control-lg multiple-select" name="conditions[]" multiple="multiple">
                     <option value="Fever">Fever</option>
                     <option value="Neck Pain">Neck Pain</option>
                     <option value="Headache">Headache</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group">
                   <label class="h3">Where is {the patient} located?</label>
-                  <input type="text" name="Location" class="form-control" placeholder="i.e. Sydney" />
+                  <input type="text" name="Location" class="form-control form-control-lg" placeholder="i.e. Sydney" />
                 </div>
                 <button type="button" class="btn submit-btn">Lets start finding a doctor now <i class="fas fa-chevron-right"></i></button>
               </form>
@@ -93,6 +93,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
     
   </body>

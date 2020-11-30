@@ -1,0 +1,13 @@
+.title-block {
+    margin-bottom: 20px;
+    @include breakpoint(md){
+        margin-bottom: 40px;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 12px;
+        color: $gray-500;
+    }
+}

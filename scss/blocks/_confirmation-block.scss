@@ -1,0 +1,18 @@
+.corfirmarion-form-wrap {
+    label {
+        @include breakpoint(md) {
+            margin-right: 20px;
+        }
+    }
+    .form-control {
+        @include breakpoint(md){
+            display: inline-block;
+            width: 90%;
+            margin-right: 20px;
+        }
+        @include breakpoint(xl){
+            margin-right: 30px;
+            width: 320px;
+        }
+    }
+}

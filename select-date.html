@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Medico</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+      <header class="header-white">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Medico"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <span class="ml-auto">Don’t have an account yet? <a href="signup.html" class="link font-weight-bold">Join Us</a></span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    <main>
+        <div class="container-fluid">
+            <ul class="d-flex align-items-center justify-content-between steps-list">
+                <li class="steps-list__step steps-list__completed">
+                    <a href="#" class="steps-list__link">
+                        <span class="steps-list__circle">
+                            <i class="fas fa-check">1</i>
+                        </span>
+                        <span class="steps-list__name">Search</span>
+                    </a>
+                </li>
+                <li class="steps-list__step steps-list__completed">
+                    <a href="#" class="steps-list__link">
+                        <span class="steps-list__circle">
+                            <i class="fas fa-check">2</i>
+                        </span>
+                        <span class="steps-list__name">Select</span>
+                    </a>
+                </li>
+                <li class="steps-list__step steps-list__active">
+                    <a href="#" class="steps-list__link">
+                        <span class="steps-list__circle">
+                            <i class="fas fa-check">3</i>
+                        </span>
+                        <span class="steps-list__name">Choose Date</span>
+                    </a>
+                </li>
+                <li class="steps-list__step">
+                    <a href="#" class="steps-list__link">
+                        <span class="steps-list__circle">
+                            <i class="fas fa-check">4</i>
+                        </span>
+                        <span class="steps-list__name">Send</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="title-block">
+                <h2>Select a date and time for your appointment!!</h2>
+            </div>
+            <div class="search-list-wrap">
+                <ul class="search-list p-4">
+                    <li class="row align-items-center m-0">
+                        <div class="col-sm-7 col-md-5 p-0">
+                            <p class="select-tag">
+                                <span class="tag tag--success"><i class="fas fa-check"></i></span>
+                                Selected Doctor
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <span class="search-list__image">
+                                    <img src="img/roger.png" alt="Dr. Roger Gordon"/>
+                                </span>
+                                <span class="search-list__info">
+                                    <h3>Dr. Roger Gordon</h3>
+                                    <p>Senior Surgeon</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-7 p-0">
+                            <span class="search-list__action">
+                                <button type="button" class="btn btn--outline-secondary btn--sm btn--rounded"><span>Select</span></button>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="select-date-wrap p-4">
+                    <form>
+                        <div class="row form-group align-items-center">
+                            <label class="col-sm-5 col-md-4">Select a preffered date</label>
+                            <div class="col-sm-7 col-md-8">
+                                <div class="datepicker-wrapper">
+                                    <input type="date" class="form-control" name="date" value="DD/MM/YY" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group align-items-center">
+                            <label class="col-sm-5 col-md-4">Select a time slot</label>
+                            <div class="col-sm-7 col-md-8">
+                                <div class="select-wrap">
+                                    <select class="form-control">
+                                        <option value="Morning 6AM - 8AM">Morning (6AM - 8AM)</option>
+                                        <option value="Day 10AM - 12PM">Day (10AM - 12PM)</option>
+                                        <option value="Afternoon 12PM - 2PM">Afternoon (12PM - 2PM)</option>
+                                        <option value="Evening 4PM - 6PM">Evening (4PM - 6PM)</option>
+                                        <option value="Night 8PM - 10PM">Night (4PM - 6PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="confirmation.html" class="btn btn--secondary w-100">Almost there, select a date <i class="fas fa-chevron-right ml-3"></i></a>
+            </div>
+        </div>
+        <footer class="footer-white">
+            <div class="container-fluid">
+            <div class="d-md-flex footer-links .flex-lg-wrap">
+                <ul class="list-style-none p-0 m-0">
+                <li>
+                    <a href="#">Help</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#">Terms and Conditions</a>
+                </li>
+                </ul>
+                <span class="ml-auto">Copyright 2020. All Rights Reserved.</span>
+            </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>

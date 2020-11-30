@@ -1,0 +1,113 @@
+.select-date-wrap {
+    padding-top: 40px;
+    form {
+        @include breakpoint(lg){
+            margin: 0 auto;
+            width: 70%;
+        }
+        @include breakpoint(xl){
+            width: 60%;
+        }
+        .form-group {
+            margin-bottom: 30px !important;
+            label {
+                @include breakpoint(sm){
+                    text-align: right;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.search-list {
+    @include breakpointMax(lg){
+        table-layout: fixed;
+    }
+    tr {
+        td {
+            &:nth-child(1) {
+                width: 75px;
+            }
+            &:nth-child(2) {
+                width: 170px;
+                @include breakpoint(md){
+                    width: 250px;
+                }
+            }
+            &:nth-child(3) {
+                @include breakpointMax(lg){
+                    width: 130px;
+                }
+            }
+            &:nth-child(4) {
+                width: 200px;
+            }
+            &:last-child {
+                text-align: center;
+                width: 138px;
+                .search-list__action {
+                    margin: 0;
+                }
+                @include breakpoint(md){
+                    width: 200px;
+                }
+            }
+        }
+    }
+    li.row {
+        border-bottom: 1px solid $gray-200;
+        padding-bottom: 20px;
+        margin-bottom: 20px !important;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &__image {
+        @include border-radius(50%);
+        display: block;
+        width: 54px;
+        height: 54px;
+        margin-right: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        h3 {
+            font-weight: $medium;
+        }
+
+        p {
+            font-weight: $light;
+            color: rgba($gray-800, 0.6);
+        }
+    }
+
+    &__rating {
+        p {
+            font-size: 12px;
+            line-height: 16px;
+            color: #b9b7c1;
+        }
+    }
+
+    &__day {
+        text-align: right;
+
+        p {
+            color: #b9b7c1;
+        }
+    }
+    &__action {
+        @include breakpointMax(sm) {
+            margin-left: 75px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+}

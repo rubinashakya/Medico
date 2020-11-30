@@ -1,4 +1,7 @@
 .sign-up-block {
+    .header-white {
+        box-shadow: none;
+    }
     .row {
         position: relative;
         .right-block {
@@ -21,6 +24,7 @@
     width: 100%;
     margin-left: initial;
     @include breakpoint(lg){
+        padding: 6.9% 0;
         width: 85%;
     }
     .text-left {
@@ -39,6 +43,23 @@
         margin-bottom: 20px;
         @include breakpointMax(sm){
             min-width: 100%;
+        }
+    }
+
+    form {
+        .form-group {
+            &.input-icon-group {
+                i {
+                    top: 49px;
+                    left: inherit;
+                    right: 15px;
+                }
+
+                .form-control {
+                    padding-left: 15px;
+                    padding-right: 40px;
+                }
+            }
         }
     }
 }
