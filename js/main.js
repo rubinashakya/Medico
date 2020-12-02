@@ -43,4 +43,64 @@ $(document).ready(function() {
         $('#sidebar').toggleClass('active');
     });
 
+    $(function () {/*from   w ww .  ja va2 s  . c o  m*/
+        var ctx = document.getElementById("doughnutChart").getContext('2d');
+        var data = {
+            datasets: [{
+                data: [30, 30, 20],
+                backgroundColor: [
+                    '#3056F5',
+                    '#29BF12',
+                    '#F43460',
+                ],
+            }],
+            labels: [
+                'New',
+                'Returning',
+                'One Time'
+            ]
+        };
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 12
+                    }
+                }
+            }
+        });
+        var ctx_2 = document.getElementById("barChart").getContext('2d');
+        var data_2 = {
+            datasets: [{
+                backgroundColor: 'rgba(41, 191, 18, 1)',
+                barPercentage: 0.5,
+                barThickness: 6,
+                maxBarThickness: 6,
+                minBarLength: 6,
+                data: [10, 20, 30, 40, 50, 60, 70]
+            }],
+            labels: ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'],
+        };
+        var myBarChart = new Chart(ctx_2, {
+            type: 'bar',
+            data: data_2,
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    });
+
 });

@@ -19,6 +19,10 @@ a {
     transition: 0.4s all ease-in-out;
 }
 
+strong {
+    font-weight: $bold;
+}
+
 main {
     position: relative;
     padding-bottom: 80px;
@@ -60,12 +64,32 @@ main {
     display: flex;
 }
 
+.font-weight-medium {
+    font-weight: $medium !important;
+}
+
 .link {
     color: $blue;
 }
 
 .text-underline {
     text-decoration: underline;
+    transition: 0.4s all ease-in-out;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.text-sm {
+    color: $gray;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.text-xs {
+    font-size: 12px;
+    line-height: 14px;
+    color: $gray-400;
 }
 
 .text-gray {
@@ -88,4 +112,8 @@ main {
         height: 100%;
         z-index: 1;
     }
+}
+
+.border-top {
+    border-top: 1px solid $gray-200;
 }

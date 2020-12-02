@@ -1,0 +1,36 @@
+.card {
+    @include border-radius(8px);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.05);
+    border: none;
+    margin-bottom: 30px;
+    .card__list {
+        > li {
+            border-bottom: 1px solid $gray-200;
+            padding: 20px 0;
+        }
+    }
+}
+.card-title {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: $medium;
+    color: $gray-800;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.author-name {
+    padding-left: 8px;
+    position: relative;
+    &:before {
+        content: '-';
+        color: $gray;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform:translateY(-50%);
+    }
+}
+

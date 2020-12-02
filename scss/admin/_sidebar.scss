@@ -1,9 +1,19 @@
 .sidebar {
     background: linear-gradient(135deg, #385DF5 0%, #8259F7 100%);
-    width: 240px;
+    width: 200px;
     min-height: 100vh;
+    transition: 0.4s all ease-in-out;
+    .close-btn {
+        display: none;
+    }
     &.active {
-        margin-left: -240px;
+        margin-left: -200px;
+    }
+    @include breakpoint(xl){
+        width: 240px;
+        &.active {
+            margin-left: -240px;
+        }
     }
     a[data-toggle="collapse"] {
         position: relative;
@@ -16,9 +26,12 @@
         transform: translateY(-50%);
     }
     &__header {
-        padding: 20px 30px;
+        padding: 15px 20px;
         .navbar-brand {
             display: block;
+        }
+        @include breakpoint(xl){
+            padding: 20px 30px;
         }
     }
     &__menu {
@@ -26,9 +39,15 @@
             a {
                 display: block;
                 color: #fefefe;
-                padding: 20px 30px;
+                padding: 15px 20px;
+                @include breakpoint(xl){
+                    padding: 20px 30px;
+                    i {
+                        margin-right: 15px;
+                    }
+                }
                 i {
-                    margin-right: 15px;
+                    margin-right: 10px;
                 }
                 &:hover {
                     background: $white;
@@ -36,6 +55,26 @@
                     color: $blue;
                 }
             }
+        }
+    }
+    @include breakpointMax(lg){
+        position: fixed;
+        top: 0;
+        left: -240px;
+        height: 100%;
+        z-index: 99999;
+        &.show {
+            left: 0;
+            margin-left: 0;
+        }
+        .close-btn {
+            position: absolute !important;
+            top: 0;
+            right: -39px;
+            font-size: 25px;
+            padding: 5px 10px;
+            border: 1px solid $blue;
+            display: block;
         }
     }
 }

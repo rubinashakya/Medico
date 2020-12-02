@@ -15,6 +15,7 @@
   <body>
      <main class="dashboard-wrapper">
         <nav id="sidebar" class="sidebar">
+            <a href="#" class="close-btn" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation"><i class="fas fa-times"></i></a>
             <div class="sidebar__header">
                 <a class="navbar-brand" href="dashboard.html"><img src="../img/logo-white.svg" alt="Medico"/></a>
             </div>
@@ -35,50 +36,56 @@
         </nav>
         <div id="content">
             <header class="dashboard-header">
-                <div class="container-fluid">
+                <div class="d-flex container-fluid align-items-center">
                     <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
+                        <button class="navbar-toggler" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </nav>
                     <a href="#" class="ml-auto"><i class="fas fa-cog"></i></a>
                 </div>
             </header>
-            <div class="d-flex layout-content">
+            <div class="d-sm-flex layout-content">
                 <div class="left-content">
                     <div class="card profile-info">
-                        <div class="d-flex">
-                            <span class="profile-img-wrap">
-                                <img src="../img/roger.png" alt=""/>
-                            </span>
-                            <div class="profile-ddetail-wrap">
-                                <h3 class="h4 font-weight-medium">Dr. Martin M.</h3>
-                                <p class="text-xs">Profile 89% completed</p>
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <span class="profile-img-wrap">
+                                    <img src="../img/roger.png" alt=""/>
+                                </span>
+                                <div class="profile-ddetail-wrap">
+                                    <h3 class="h4 font-weight-medium mb-1">Dr. Martin M.</h3>
+                                    <p class="text-xs">Profile 89% completed</p>
+                                </div>
                             </div>
+                        <a href="#" class="font-weight-medium mt-3 d-inline-block"><i class="fas fa-plus"></i> Add your gender (11%)</a>
                         </div>
-                        <a href="#"><i class="fas fa-plus"></i> Add your gender (11%)</a>
                     </div>
                     <div class="card daily-appointments">
-                        <h3 class="h4 font-weight-medium">Daily Appointments</h3>
-                        <p class="text-xs">Insights on your daily appointment requests</p>
+                        <div class="card-body">
+                            <h3 class="h4 font-weight-medium mb-2">Daily Appointments</h3>
+                            <p class="text-xs">Insights on your daily appointment requests</p>
+                            <canvas id="barChart" width="200" height="200" class="mt-3"></canvas>
+                        </div>
                     </div>
                     <div class="card patients-chart">
-                        <h3 class="h4 font-weight-medium">Patients</h3>
-                        <p>Insights on who your customer is, are they new or returning.</p>
+                        <div class="card-body">
+                            <h3 class="h4 font-weight-medium mb-2">Patients</h3>
+                            <p class="text-xs">Insights on who your customer is, are they new or returning.</p>
+                            <canvas id="doughnutChart" width="200" height="200" class="mt-3"></canvas>
+                        </div>
                     </div>
                 </div>
                 <div class="right-content">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <div clas="card-body d-flex">
+                                    <div class="card-body d-xl-flex justify-content-between align-items-center text-xl-left text-center">
                                         <div class="info-wrap">
-                                            <p class="text-xs">Total Appointments</p>
+                                            <p class="text-xs mb-2">Total Appointments</p>
                                             <h3 class="font-weight-medium">2400</h3>
                                         </div>
                                         <div class="icon-wrap">
@@ -87,11 +94,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <div clas="card-body d-flex">
+                                    <div class="card-body d-xl-flex justify-content-between align-items-center text-xl-left text-center">
                                         <div class="info-wrap">
-                                            <p class="text-xs">Total Ratings and Reviews</p>
+                                            <p class="text-xs mb-2">Total Ratings and Reviews</p>
                                             <h3 class="font-weight-medium">13</h3>
                                         </div>
                                         <div class="icon-wrap">
@@ -100,11 +107,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <div clas="card-body d-flex">
+                                    <div class="card-body d-xl-flex justify-content-between align-items-center text-xl-left text-center">
                                         <div class="info-wrap">
-                                            <p class="text-xs">Total Profile Views</p>
+                                            <p class="text-xs mb-2">Total Profile Views</p>
                                             <h3 class="font-weight-medium">1239</h3>
                                         </div>
                                         <div class="icon-wrap">
@@ -115,57 +122,57 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12 sol-md-7 col-lg-8">
+                            <div class="col-sm-12 col-md-7 col-xl-8">
                                 <h2 class="card-title">Latest Reviews</h2>
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3 class="h4"><strong>3 out of 5</strong> stars from <a href="#" class="link underline">301 reviews</a></h3>
-                                        <ul class="card__list">
+                                        <h3 class="h4 mb-3"><strong>3 out of 5</strong> stars from <a href="#" class="link text-underline">301 reviews</a></h3>
+                                        <ul class="card__list border-top">
                                             <li>
-                                                <ul class="stars three-star">
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/gray-star.svg" alt=""/></li>
-                                                    <li><img src="img/gray-star.svg" alt=""/></li>
+                                                <ul class="stars three-star mb-1">
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/gray-star.svg" alt=""/></li>
+                                                    <li><img src="../img/gray-star.svg" alt=""/></li>
                                                 </ul>
-                                                <p>When I found out I was pregnant with my first child, I was hoping to find an OB who I could trust..</p>
+                                                <p class="pb-1">When I found out I was pregnant with my first child, I was hoping to find an OB who I could trust..</p>
                                                 <span class="text-sm author-name">Tiffany</span>
                                             </li>
                                             <li>
-                                                <ul class="stars three-star">
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/Star.svg" alt=""/></li>
-                                                    <li><img src="img/gray-star.svg" alt=""/></li>
-                                                    <li><img src="img/gray-star.svg" alt=""/></li>
+                                                <ul class="stars three-star mb-1">
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/Star.svg" alt=""/></li>
+                                                    <li><img src="../img/gray-star.svg" alt=""/></li>
+                                                    <li><img src="../img/gray-star.svg" alt=""/></li>
                                                 </ul>
-                                                <p>When I found out I was pregnant with my first child, I was hoping to find an OB who I could trust..</p>
+                                                <p class="pb-1">When I found out I was pregnant with my first child, I was hoping to find an OB who I could trust..</p>
                                                 <span class="text-sm author-name">Tiffany</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 sol-md-5 col-lg-4">
+                            <div class="col-sm-12 col-md-5 col-xl-4">
                                 <h2 class="card-title">Appointment Activity</h2>
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body pt-0">
                                         <ul class="card__list">
                                             <li>
-                                                <h3 class="h4">Albus Dumbledore</h3>
-                                                <p class="text-xs">Requested on 19 October</p>
-                                                <p class="text-xs"><i class="fas fa-clock"></i> Afternoon</p>
+                                                <h3 class="h4 font-weight-medium mb-2">Albus Dumbledore</h3>
+                                                <p class="text-xs mb-2">Requested on 19 October</p>
+                                                <p class="text-xs"><i class="fas fa-clock mr-1"></i> Afternoon</p>
                                             </li>
                                             <li>
-                                                <h3 class="h4">Severence Snape</h3>
-                                                <p class="text-xs">Requested on 17 October</p>
-                                                <p class="text-xs"><i class="fas fa-clock"></i> Morning</p>
+                                                <h3 class="h4 font-weight-medium mb-2">Severence Snape</h3>
+                                                <p class="text-xs mb-2">Requested on 17 October</p>
+                                                <p class="text-xs"><i class="fas fa-clock mr-1"></i> Morning</p>
                                             </li>
                                             <li>
-                                                <h3 class="h4">Rupert Grint</h3>
-                                                <p class="text-xs">Requested on 16 October</p>
-                                                <p class="text-xs"><i class="fas fa-clock"></i> Evening</p>
+                                                <h3 class="h4 font-weight-medium mb-2">Rupert Grint</h3>
+                                                <p class="text-xs mb-2">Requested on 16 October</p>
+                                                <p class="text-xs"><i class="fas fa-clock mr-1"></i> Evening</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -173,6 +180,11 @@
                             </div>
                         </div>
                     </div>
+                    <footer class="dashboard-footer">
+                        <div class="container-fluid">
+                            <p class="text-xs text-center">Copyright 2020. All Rights Reserved.</p>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -182,6 +194,7 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/slick.min.js"></script>
+    <script src="../js/Chart.bundle.js"></script>
     <script src="../js/main.js"></script>
     
   </body>
