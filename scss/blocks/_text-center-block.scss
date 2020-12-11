@@ -21,6 +21,19 @@
         @include breakpoint(lg){
             margin-bottom: 100px;
         }
+        &--border {
+            position: relative;
+            &:after {
+                content: '';
+                background: $gray-300;
+                position: absolute;
+                left: 50%;
+                bottom: -55px;
+                width: 67px;
+                height: 1px;
+                transform: translateX(-50%);
+            }
+        }
     }
     .text-gray {
         span {

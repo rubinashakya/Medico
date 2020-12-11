@@ -9,7 +9,10 @@
     td {
         border-top: 1px solid $gray-200;
         vertical-align: middle;
-        padding: 25px 0 25px 20px;
+        padding: 20px 0 20px 10px;
+        @include breakpoint(md){
+            padding: 25px 0 25px 20px;
+        }
     }
 }
 
