@@ -28,10 +28,16 @@
                 background: $gray-300;
                 position: absolute;
                 left: 50%;
-                bottom: -55px;
+                bottom: -20px;
                 width: 67px;
                 height: 1px;
                 transform: translateX(-50%);
+                @include breakpoint(md){
+                    bottom: -30px;
+                }
+                @include breakpoint(lg){
+                    bottom: -55px;
+                }
             }
         }
     }
