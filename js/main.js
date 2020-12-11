@@ -44,6 +44,8 @@ $(document).ready(function() {
     });
 
     $(function () {/*from   w ww .  ja va2 s  . c o  m*/
+        let ctx1 = document.getElementById("doughnutChart");
+        ctx1.height= 100;
         var ctx = document.getElementById("doughnutChart").getContext('2d');
         var data = {
             datasets: [{
@@ -63,28 +65,33 @@ $(document).ready(function() {
         var myDoughnutChart = new Chart(ctx, {
             type: 'doughnut',
             data: data,
+            borderWidth: 1,
             options: {
                 responsive: false,
                 maintainAspectRatio: false,
+                cutoutPercentage: 66,
                 legend: {
-                    position: 'bottom',
+                    position: 'right',
                     labels: {
                         boxWidth: 12
                     }
                 }
             }
         });
+        let ctx2 = document.getElementById("barChart");
+        ctx2.height = 100;
         var ctx_2 = document.getElementById("barChart").getContext('2d');
+        
         var data_2 = {
             datasets: [{
                 backgroundColor: 'rgba(41, 191, 18, 1)',
                 barPercentage: 0.5,
-                barThickness: 6,
+                barThickness: 'flex',
                 maxBarThickness: 6,
                 minBarLength: 6,
-                data: [10, 20, 30, 40, 50, 60, 70]
+                data: [13, 43, 33, 52, 23, 64, 32, 73, 43, 33, 52, 23, 64, 32]
             }],
-            labels: ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'],
+            labels: ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat',],
         };
         var myBarChart = new Chart(ctx_2, {
             type: 'bar',
@@ -94,10 +101,14 @@ $(document).ready(function() {
                 maintainAspectRatio: false,
                 scales: {
                     yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
+                        display: false
+                    }],
+                    xAxes: [{
+                        display: false
                     }]
+                },
+                legend:{
+                    display: false
                 }
             }
         });
