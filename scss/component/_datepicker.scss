@@ -1,7 +1,8 @@
 .datepicker-wrapper {
     background: $gray-100;
     position: relative;
-    .form-control {
+    .form-control,
+    .date-input {
         background: transparent;
         position: relative;
         z-index: 2;
@@ -42,5 +43,59 @@
         right: 15px;
         z-index: 1;
         cursor: pointer;
+    }
+}
+
+.right-content {
+    .datepicker-wrapper {
+        @include border-radius(19px);
+        background: $gray-100;
+        position: relative;
+        overflow: hidden;
+        width: 162px;
+        .form-control,
+        .date-input {
+            background: transparent;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            &:before {
+                content: attr(placeholder) !important;
+                color: $gray-400;
+            }
+            &:invalid::-webkit-datetime-edit {
+                color: transparent;
+                text-transform: uppercase;
+                -webkit-appearance: none;
+            }
+            &::-webkit-calendar-picker-indicator {
+                background: transparent;
+                opacity: 0;
+                z-index: 1;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            &::-webkit-datetime-edit,
+            &::-webkit-datetime-edit-day-field,
+            &::-webkit-datetime-edit-month-field,
+            &::-webkit-datetime-edit-year-field {
+                -webkit-appearance: none;
+                display: none;
+            }
+        }
+        &:after {
+            content: '\f073';
+            color: $gray-400;
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            top: 9px;
+            right: 15px;
+            z-index: 1;
+            cursor: pointer;
+        }
     }
 }

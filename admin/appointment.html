@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="" />
+    <link rel="icon" href="../favicon.ico" />
+    <title>Medico</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../css/select2.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+     <main class="dashboard-wrapper">
+        <nav id="sidebar" class="sidebar">
+            <a href="#" class="close-btn" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation"><i class="fas fa-times"></i></a>
+            <div class="sidebar__header">
+                <a class="navbar-brand" href="dashboard.html"><img src="../img/logo-white.svg" alt="Medico"/></a>
+            </div>
+            <ul class="sidebar__menu list-unstyled">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user-edit"></i> Profile Edit</a>
+                </li>
+                <li class="active">
+                    <a href="appointment.html"><i class="fas fa-stethoscope"></i> Appointments</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-star"></i> Reviews</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <header class="dashboard-header">
+                <div class="d-flex container-fluid align-items-center">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+                    <a href="#" class="ml-auto"><i class="fas fa-cog"></i></a>
+                </div>
+            </header>
+            <div class="d-sm-flex layout-content">
+                <div class="left-content">
+                    <div class="card profile-info">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <span class="profile-img-wrap">
+                                    <img src="../img/roger.png" alt=""/>
+                                </span>
+                                <div class="profile-ddetail-wrap">
+                                    <h3 class="h4 font-weight-medium mb-1">Dr. Martin M.</h3>
+                                    <p class="text-xs">Profile 89% completed</p>
+                                </div>
+                            </div>
+                            <a href="#" class="font-weight-medium mt-3 d-inline-block"><i class="fas fa-plus"></i> Add your gender (11%)</a>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="card daily-appointments">
+                        <div class="card-body">
+                            <h3 class="h4 font-weight-medium mb-2">Daily Appointments</h3>
+                            <p class="text-xs">Insights on your daily appointment requests</p>
+                            <canvas id="barChart" width="200" height="200" class="mt-3"></canvas>
+                        </div>
+                    </div>
+                    <div class="card patients-chart">
+                        <div class="card-body">
+                            <h3 class="h4 font-weight-medium mb-2">Patients</h3>
+                            <p class="text-xs">Insights on who your customer is, are they new or returning.</p>
+                            <canvas id="doughnutChart" width="200" height="200" class="mt-3"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content w-100">
+                    <div class="container-fluid">
+                        <div class="title-wrap mb-2">
+                            <h2 class="card-title mb-1">Appointment Requests</h2>
+                            <p class="text-xs">All active appointments requests are listed here</p>
+                        </div>
+                        <div class="filter-wrap d-md-flex justify-content-between">
+                            <div class="search-input-wrapper">
+                                <input type="text" class="form-control search-input" name="search" placeholder="Search by ID, Name" />
+                            </div>
+                            <span class="datepicker-wrapper d-block">
+                                <input type="date" class="form-control date-input" name="date" placeholder="Filter by Date..." />
+                            </span>
+                        </div>
+                        <div class="table-wrapper overflow-auto">
+                            <table class="table dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Patient Name</th>
+                                        <th>Date Requested</th>
+                                        <th>Requested Time</th>
+                                        <th>Phone</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Med-01</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Afternoon</td>
+                                        <td>763-726-9923</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-02</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Morning</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-03</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Morning</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-04</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Evening</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-05</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Morning</td>
+                                        <td>763-726-9923</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-06</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Morning</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-07</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Evening</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-08</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Afternoon</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-09</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Evening</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Med-10</td>
+                                        <td>Devin Canon</td>
+                                        <td>02/22/2020</td>
+                                        <td>Morning</td>
+                                        <td>726-924-7402</td>
+                                        <td class="action-btn-wrap">
+                                            <a href="#" class="btn btn--xs btn--secondary">Details</a>
+                                            <a href="#" class="btn btn--xs btn--primary">Action</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="d-flex pagination align-items-center justify-content-end">
+                            <a href="#" class="prev-btn"><i class="fas fa-chevron-left"></i> prev</a>
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <span>...</span>
+                            <a href="#">10</a>
+                            <a href="#" class="next-btn">next <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <footer class="dashboard-footer">
+                        <div class="container-fluid">
+                            <p class="text-xs text-center">Copyright 2020. All Rights Reserved.</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+     </main>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/Chart.bundle.js"></script>
+    <script src="../js/main.js"></script>
+    
+  </body>
+</html>

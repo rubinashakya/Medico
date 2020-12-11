@@ -40,16 +40,23 @@
                 display: block;
                 color: #fefefe;
                 padding: 15px 20px;
-                @include breakpoint(xl){
-                    padding: 20px 30px;
-                    i {
-                        margin-right: 15px;
-                    }
-                }
                 i {
                     margin-right: 10px;
                 }
+                @include breakpoint(xl){
+                    padding: 20px 30px;
+                    i {
+                        margin-right: 18px;
+                    }
+                }
                 &:hover {
+                    background: $white;
+                    text-decoration: none;
+                    color: $blue;
+                }
+            }
+            &.active {
+                a {
                     background: $white;
                     text-decoration: none;
                     color: $blue;

@@ -12,3 +12,60 @@
         padding: 25px 0 25px 20px;
     }
 }
+
+.dashboard-table {
+    margin-top: 20px;
+    margin-bottom: 0;
+    thead {
+        th {
+            background: #f6f6f9;
+            border: none;
+            color: $gray;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: $medium;
+            padding: 9px 15px 8px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            @include breakpoint(1440px){
+                padding: 9px 22px 8px;
+            }
+        }
+    }
+    tbody {
+        &:before {
+            content: '';
+            display: table-row;
+            height: 8px;
+        }
+    }
+    td {
+        background: $white;
+        padding: 15px;
+        color: $gray-700;
+        border-top: 1px solid #f0f2f5;
+        white-space: nowrap;
+        &.action-btn-wrap {
+            width: 200px;
+            text-align: right;
+            .btn--xs {
+                @include border-radius(20px);
+                display: inline-flex;
+                align-items: center;
+                min-width: auto;
+                height: 21px;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                margin-left: 8px;
+                &.btn--secondary {
+                    background: $gray-200;
+                    color: $gray;
+                }
+            }
+        }
+        @include breakpoint(1440px){
+            padding: 16px 22px;
+        }
+    }
+}

@@ -69,3 +69,36 @@ form {
     }
 }
 
+.search-input,
+.date-input {
+    border: none;
+    width: 240px;
+    font-size: 14px;
+    height: 38px;
+    @include border-radius(19px);
+    @include placeholder {
+        color: $gray-400;
+        font-weight: $light;
+    }
+}
+
+.search-input-wrapper {
+    @include border-radius(19px);
+    position: relative;
+    background: $white;
+    overflow: hidden;
+    .search-input {
+        border: none;
+        background: transparent;
+        padding-left: 30px;
+    }
+    &:before {
+        content: '\f002';
+        color: $gray-400;
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        font-size: 14px;
+        top: 10px;
+        left: 10px;
+    }
+}
