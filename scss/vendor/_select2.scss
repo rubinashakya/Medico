@@ -37,3 +37,48 @@
         }
     }
 }
+
+.multiple-select {
+    background: $gray-100;
+    border: 1px solid $gray-200;
+    height: auto;
+    padding: 5px 2.5px 0;
+    font-size: 16px;
+    line-height: 0;
+    min-height: 55px;
+    transition: 0.4s all ease-in-out;
+    .tag-inputs {
+        height: 100%;
+        width: 100%;
+    }
+    .tags {
+        @include border-radius(4px);
+        background: $green;
+        color: $white;
+        margin: 0 2.5px 5px;
+        position: relative;
+        padding: 0 10px;
+        display: inline-flex;
+        height: 42px;
+        align-items: center;
+        i {
+            color: $dark-green;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+
+    .tags-new {
+        display: inline-flex;
+        height: 42px;
+        width: auto;
+        input {
+            border: none;
+            outline: none;
+            &:focus {
+                border: none;
+                outline: none
+            }
+        }
+    }
+}

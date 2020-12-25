@@ -60,6 +60,17 @@
                     <option value="Common Cold">Common Cold</option>
                   </select>
                 </div>
+                <div className="form-control form-control-lg multiple-select">
+                  <ul className="tags-input" id="tags-in">
+                    <li className="tags">
+                      Fever
+                      <i className="fa fa-times" />
+                    </li>
+                    <li className="tags-new">
+                      <input type="text" class="form-control-lg" onChange={handleTest} />
+                    </li>
+                  </ul>
+                </div>
                 <div class="form-group">
                   <label class="h3">Where is {the patient} located?</label>
                   <input type="text" name="Location" class="form-control form-control-lg" placeholder="i.e. Sydney" />
