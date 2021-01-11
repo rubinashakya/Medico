@@ -15,6 +15,9 @@
 @import "global/typography";
 @import "global/interactions";
 
+//Utilities
+@import "utilities/badge";
+
 //Component
 @import "component/buttons";
 @import "component/form";
@@ -47,6 +50,8 @@
 @import "blocks/select-date-block";
 @import "blocks/confirmation-block";
 @import "blocks/pagination";
+@import "blocks/doctor-intro-block";
+@import "blocks/doctor-profile-block";
 
 //Admin styles
 @import "admin/dashboard-content.scss";

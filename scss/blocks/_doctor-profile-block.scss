@@ -1,0 +1,140 @@
+.doctor-profile-block {
+    padding: 30px 0;
+    .h3 {
+        color: $gray-700;
+        margin-bottom: 18px;
+    }
+}
+
+.about-block {
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.reviews-block {
+    .h3 {
+        margin-bottom: 8px;
+    }
+    .text-gray {
+        color: $gray-500;
+    }
+    .reviews-progressbar {
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 30px;
+        @include breakpoint(480px){
+            width: 386px;
+        }
+        .review-score {
+           .h1 {
+               margin-bottom: 0;
+               margin-right: 10px;
+           }
+           .link {
+               text-decoration: underline;
+           }
+        }
+        .rating {
+            .d-flex {
+                margin: 12px 0;
+            }
+        }
+        .label {
+            min-width: 37px;
+        }
+        .progress {
+            @include border-left-radius(5px);
+            @include border-right-radius(0);
+            background: $gray-200;
+            width: 300px;
+            height: 10px;
+            margin: 0 10px;
+            &--green {
+                .progress-bar {
+                    background: $green;
+                }
+            }
+            &--pink {
+                .progress-bar {
+                    background: $pink;
+                }
+            }
+        }
+    }
+    .reviews-list {
+        &__items {
+            border: 1px solid $gray-200;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            @include breakpoint(md){
+                padding: 20px;
+            }
+            .stars {
+                margin-bottom: 8px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 12px;
+            }
+            .auther {
+                float: right;
+                font-size: 14px;
+                line-height: 20px;
+                color: $gray-900;
+            }
+        }
+    }
+    .link {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+.location-block {
+    margin-top: 30px;
+    @include breakpoint(md){
+        margin-top: 0;
+    }
+    .h4 {
+        color: $gray-700;
+        margin-bottom: 5px;
+    }
+    .text-sm {
+        color: $gray-500;
+    }
+    .phone {
+        display: block;
+        margin: 10px 0;
+        color: $gray-900;
+        i {
+            margin-right: 5px;
+        }
+    }
+    .location {
+        margin-bottom: 30px;
+        .available-hour-block {
+            .h4 {
+                margin-bottom: 10px;
+            }
+        }
+        .time-list {
+            li {
+                font-size: 14px;
+                line-height: 20px;
+                span {
+                    background: $gray-200;
+                    display: inline-block;
+                    min-width: 51px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-right: 7px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

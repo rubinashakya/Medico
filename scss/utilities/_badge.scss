@@ -1,0 +1,13 @@
+.badge {
+    @include breakpoint(8px);
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: $regular;
+    &-primary {
+        background: $blue;
+    }
+    i {
+        font-size: 8px;
+        margin-right: 2px;
+    }
+}

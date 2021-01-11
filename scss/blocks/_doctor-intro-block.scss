@@ -1,0 +1,144 @@
+.doctor-intro-block {
+    padding: 30px 0;
+    &__image {
+        @include border-radius(50%);
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        line-height: 0;
+        display: inline-block;
+        @include breakpoint(sm){
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        @include breakpoint(xl){
+            width: 140px;
+            height: 140px;
+            margin-right: 30px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__detail {
+        .h3 {
+            color: $gray-800;
+            .badge-primary {
+                position: relative;
+                top: -4px;
+                margin-left: 10px;
+            }
+        }
+        .speciality-list {
+            margin-bottom: 18px;
+            li {
+                color: $gray-900;
+                display: inline;
+                position: relative;
+                padding-left: 15px;
+                margin-left: 6px;
+                &:before {
+                    @include border-radius(50%);
+                    background: $gray-900;
+                    content: '';
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    width: 6px;
+                    height: 6px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                    padding-left: 0;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .text-sm {
+            color: $gray-500;
+            margin-bottom: 8px;
+        }
+        .stars {
+            display: inline-flex;
+        }
+        .text-xs {
+            position: relative;
+            top: -3px;
+            margin-left: 13px;
+        }
+    }
+    @include breakpointMax(sm) {
+        &__image-wrap {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        &__detail {
+            text-align: center;
+        }
+    }
+}
+
+.action-to-call-wrap {
+    text-align: right;
+    .btn {
+        margin-bottom: 20px;
+    }
+    .call-now-btn {
+        color: $gray-900;
+        margin-left: 15px;
+        font-size: 15px;
+        @include breakpoint(1336px){
+            font-size: 16px; 
+            margin-left: 20px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        .icon-wrap {
+            @include border-radius(50%);
+            background: $blue;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: 30px;
+            font-size: 12px;
+            margin-right: 2px;
+            @include breakpoint(1336px){
+                margin-right: 7px;
+            }
+            i {
+                color: $white;
+            }
+        }
+    }
+    .d-flex {
+        .call-now-btn {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    @include breakpointMax(lg) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0 0;
+        .btn {
+            margin-bottom: 0;
+        }
+    }
+    @include breakpointMax(sm){
+        display: block;
+        text-align: center;
+        .d-flex {
+            justify-content: center;
+            margin-top: 10px;
+        }
+    }
+}
